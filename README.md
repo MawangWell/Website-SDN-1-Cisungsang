@@ -1,2 +1,518 @@
-# Website-SDN-1-Cisungsang
-Web Sekolah - Landing Page
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SDN 1 CISUNGSANG</title>
+  <meta name="description" content="Landing page resmi SDN 1 Cisungsang. Profil sekolah, visi misi, data siswa & guru, agenda, galeri, dan kontak." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --brand:#0077ff; --brand-50:#e6f4f3; --brand-100:#cce9e7; --brand-600:#006eff; --brand-700:#0219e7; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'; }
+    /* Hide scrollbars on number counters */
+    .stat { tab-size: 2; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,0.7); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(2, 44, 34, 0.08); }
+  </style>
+</head>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/90 glass border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3">
+          <img src="https://www.quipper.com/id/blog/wp-content/uploads/2021/03/tut-wuri-handayani-ftrd-image.png" alt="Logo Sekolah" class="w-9 h-9 rounded-xl object-cover"/>
+          <div class="leading-tight">
+            <div class="font-extrabold tracking-tight text-lg">SDN 1 CISUNGSANG</div>
+            <div class="text-xs text-slate-500 -mt-0.5">Sekolah Dasar</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#profil" class="hover:text-[color:var(--brand)]">Profil</a>
+          <a href="#visi" class="hover:text-[color:var(--brand)]">Visi Misi</a>
+          <a href="#data" class="hover:text-[color:var(--brand)]">Data</a>
+          <a href="#guru" class="hover:text-[color:var(--brand)]">Guru</a>
+          <a href="#agenda" class="hover:text-[color:var(--brand)]">Agenda</a>
+          <a href="#galeri" class="hover:text-[color:var(--brand)]">Galeri</a>
+          <a href="#kontak" class="hover:text-[color:var(--brand)]">Kontak</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#ppdb" class="hidden md:inline-flex px-4 py-2 text-sm font-semibold rounded-xl bg-[color:var(--brand)] text-white hover:bg-[color:var(--brand-700)] shadow-soft">PPDB</a>
+          <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-slate-200 hover:bg-slate-50" aria-label="Buka menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <div class="grid gap-2 text-sm">
+          <a class="px-3 py-2 rounded-lg hover:bg-slate-50" href="#profil">Profil</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-slate-50" href="#visi">Visi Misi</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-slate-50" href="#data">Data</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-slate-50" href="#guru">Guru</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-slate-50" href="#agenda">Agenda</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-slate-50" href="#galeri">Galeri</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-slate-50" href="#kontak">Kontak</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrh0OTX_idkX8lpYxHjUZee2pH_HjQpXUclKVziepyOS_8mjk8qxhvTSdMcVQfdFPIckZg2qrpeWKDHql8xHeKcJRZ0gKKKB0YOMV97N2mTkj200kykGkOLzN7AlJk-U5fu-dyn=s680-w680-h510-rw" alt="Ilustrasi Sekolah" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-white"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 py-28 md:py-36">
+      <div class="max-w-2xl text-white">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-white/15 ring-1 ring-white/20 mb-4">Sekolah Ramah Anak • Berakhlak Mulia</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">Membentuk Generasi Cerdas, Kreatif, dan Berkarakter</h1>
+        <p class="mt-4 md:text-lg text-white/90">SDN 1 Cisungsang berkomitmen menghadirkan pembelajaran yang menyenangkan, inklusif, dan berorientasi pada prestasi.</p>
+        <div class="mt-8 flex items-center gap-3">
+          <a href="#ppdb" class="px-5 py-3 rounded-2xl bg-white text-slate-900 font-semibold shadow-soft hover:opacity-95">Daftar PPDB</a>
+          <a href="#profil" class="px-5 py-3 rounded-2xl bg-black/40 text-white font-semibold ring-1 ring-white/25 hover:bg-black/50">Lihat Profil</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profil -->
+  <section id="profil" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="order-2 md:order-1">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Profil Sekolah</h2>
+          <p class="mt-4 text-slate-600 leading-relaxed">SDN 1 Cisungsang merupakan satuan pendidikan dasar yang berorientasi pada penguatan karakter dan literasi numerasi. Kami menyediakan lingkungan belajar yang aman, inklusif, dan berwawasan digital untuk mendukung talenta setiap siswa.</p>
+          <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
+            <div class="p-4 rounded-2xl border border-slate-200">
+              <dt class="text-slate-500">Akreditasi</dt><dd class="text-lg font-bold">B (Baik)</dd>
+            </div>
+            <div class="p-4 rounded-2xl border border-slate-200">
+              <dt class="text-slate-500">Kurikulum</dt><dd class="text-lg font-bold">Merdeka</dd>
+            </div>
+            <div class="p-4 rounded-2xl border border-slate-200">
+              <dt class="text-slate-500">Ekstrakurikuler</dt><dd class="text-lg font-bold">Pramuka, Seni, Olahraga</dd>
+            </div>
+            <div class="p-4 rounded-2xl border border-slate-200">
+              <dt class="text-slate-500">Lokasi</dt><dd class="text-lg font-bold">Desa Cisungsang, Lebak Banten</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-soft ring-1 ring-slate-200">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrh0OTX_idkX8lpYxHjUZee2pH_HjQpXUclKVziepyOS_8mjk8qxhvTSdMcVQfdFPIckZg2qrpeWKDHql8xHeKcJRZ0gKKKB0YOMV97N2mTkj200kykGkOLzN7AlJk-U5fu-dyn=s680-w680-h510-rw" class="w-full h-full object-cover" alt="Sekolah SDN 1 CISUNGSANG" />
+            <div class="absolute bottom-3 right-3 bg-white/90 text-xs px-3 py-1 rounded-full ring-1 ring-slate-200">Sekolah SDN 1 Cisungsang</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section
+
+  <!-- Visi & Misi -->
+  <section id="visi" class="py-16 md:py-24 bg-[color:var(--brand-50)]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Visi & Misi</h2>
+        <p class="mt-3 text-slate-600">Menjadi sekolah dasar yang unggul dalam prestasi akademik, berkarakter, dan berbudaya.</p>
+      
+      </p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <h3 class="font-bold text-lg">Visi</h3>
+          <p class="mt-2 text-slate-600">Mewujudkan Peserta Didik Yang Literat, Numerat, Berkarakter Pancasila dan Menjunjung Tinggi Nilai Kebinekaan Dalam Lingkungan Belajar Yang Aman, inklusif dan bermakna..</p>
+        </div>
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <h3 class="font-bold text-lg">Misi</h3>
+          <ul class="mt-2 list-disc pl-5 text-slate-600 space-y-2">
+            <li>Meningkatkan Kualitas Pembelajaran Literasi dan Numerasi</li>
+            <li>Menumbuhkan Nilai-nilai Karakter dan Profil Pelajar Pancasila</li>
+            <li>Membangun Budaya Sekolah Yang Inklusif dan Aman</li>
+            <li>Menguatkan Kepemimpinan Pembelajaran Kepala Sekolah dan Guru</li>
+            <li>Memanfaatkan Potensi Lokal dan Budaya Setempat</li>
+            <li>Meningkatkan Kompetensi Guru dan Tenaga Pendidikan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data ringkas -->
+  <section id="data" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-5">
+        <!-- Card -->
+        <div class="p-6 rounded-3xl border border-slate-200 shadow-soft">
+          <div class="text-slate-500 text-sm">Siswa Aktif</div>
+          <div class="mt-2 text-4xl font-extrabold stat" data-target="102">0</div>
+          <div class="mt-1 text-xs text-slate-500">Tahun ajaran 2025/2026</div>
+        </div>
+        <div class="p-6 rounded-3xl border border-slate-200 shadow-soft">
+          <div class="text-slate-500 text-sm">Guru</div>
+          <div class="mt-2 text-4xl font-extrabold stat" data-target="8">0</div>
+          <div class="mt-1 text-xs text-slate-500">Tetap & Honorer</div>
+        </div>
+         <div class="p-6 rounded-3xl border border-slate-200 shadow-soft">
+          <div class="text-slate-500 text-sm">Tendik</div>
+          <div class="mt-2 text-4xl font-extrabold stat" data-target="1">0</div>
+          <div class="mt-1 text-xs text-slate-500">Tetap & Honorer</div>
+        </div>
+        <div class="p-6 rounded-3xl border border-slate-200 shadow-soft">
+          <div class="text-slate-500 text-sm">Ruang Kelas</div>
+          <div class="mt-2 text-4xl font-extrabold stat" data-target="6">0</div>
+          <div class="mt-1 text-xs text-slate-500">Fasilitas Belajar</div>
+        </div>
+        <div class="p-6 rounded-3xl border border-slate-200 shadow-soft">
+          <div class="text-slate-500 text-sm">Prestasi</div>
+          <div class="mt-2 text-4xl font-extrabold stat" data-target="40">0</div>
+          <div class="mt-1 text-xs text-slate-500">Akademik & Non-akademik</div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guru -->
+  <section id="guru" class="py-16 md:py-24 bg-[color:var(--brand-50)]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Guru Kami</h2>
+          <p class="mt-2 text-slate-600">Tenaga pendidik profesional dan berdedikasi.</p>
+        </div>
+        <a href="#" class="hidden md:inline text-sm font-semibold text-[color:var(--brand)] hover:text-[color:var(--brand-700)]">Lihat daftar lengkap →</a>
+      </div>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <!-- 4 sample guru cards -->
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="Foto/KEPSEK.png" alt="Guru 1" />
+          <div class="mt-3">
+            <div class="font-bold">Suharya,S.Pd.Sd </div>
+            <div class="text-sm text-slate-500">Kepala Sekolah</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop" alt="Guru 2" />
+          <div class="mt-3">
+            <div class="font-bold">Juhayati,S.Pd.Sd</div>
+            <div class="text-sm text-slate-500">Guru Kelas 1</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" alt="Guru 3" />
+          <div class="mt-3">
+            <div class="font-bold">Sri Ratna Kastori,S.Pd.Sd</div>
+            <div class="text-sm text-slate-500">Guru Kelas 2</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Guru 4" />
+          <div class="mt-3">
+            <div class="font-bold">Aisah,S.Pd.Sd</div>
+            <div class="text-sm text-slate-500">Guru Kelas 3</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Guru 4" />
+          <div class="mt-3">
+            <div class="font-bold">Leni Yulyani,S.Pd.Sd</div>
+            <div class="text-sm text-slate-500">Guru Kelas 4</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Guru 4" />
+          <div class="mt-3">
+            <div class="font-bold">Yudi Yantara,S.Pd</div>
+            <div class="text-sm text-slate-500">Guru Kelas 5</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Guru 4" />
+          <div class="mt-3">
+            <div class="font-bold">Yuli Lusniawati,S.Pd</div>
+            <div class="text-sm text-slate-500">Guru Kelas 6</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Guru 4" />
+          <div class="mt-3">
+            <div class="font-bold">Suhendi Ruyandi,S.Pd.I</div>
+            <div class="text-sm text-slate-500">Guru Agama</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Guru 4" />
+          <div class="mt-3">
+            <div class="font-bold">Leti Litiawati,S.Pd</div>
+            <div class="text-sm text-slate-500">Guru PJOK</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Komite -->
+  <section id="guru" class="py-16 md:py-24 bg-[color:var(--brand-50)]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Komite Sekolah</h2>
+          <p class="mt-2 text-slate-600">Jajaran Komite dan Anggota.</p>
+        </div>
+        <a href="#" class="hidden md:inline text-sm font-semibold text-[color:var(--brand)] hover:text-[color:var(--brand-700)]">Lihat daftar lengkap →</a>
+      </div>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- 4 sample guru cards -->
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="Foto/asep syidik.png" alt="Guru 1" />
+          <div class="mt-3">
+            <div class="font-bold">Asep Mulyana Syidik </div>
+            <div class="text-sm text-slate-500">Ketua Komite</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop" alt="Guru 2" />
+          <div class="mt-3">
+            <div class="font-bold">Cucu Hayati, S.Pd.MPd</div>
+            <div class="text-sm text-slate-500">Sekretaris</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop" alt="Guru 3" />
+          <div class="mt-3">
+            <div class="font-bold">Dede Sihabudin</div>
+            <div class="text-sm text-slate-500">Bendahara</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Guru 4" />
+          <div class="mt-3">
+            <div class="font-bold">Abdul Goni</div>
+            <div class="text-sm text-slate-500">Anggota</div>
+          </div>
+        </div>
+        <div class="p-5 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <img class="w-full aspect-[4/3] object-cover rounded-2xl" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" alt="Guru 4" />
+          <div class="mt-3">
+            <div class="font-bold">Oyon</div>
+            <div class="text-sm text-slate-500">Anggota</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agenda / Event -->
+  <section id="agenda" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Agenda & Kegiatan</h2>
+        <p class="mt-3 text-slate-600">Informasi kegiatan sekolah terbaru.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-3 gap-5">
+        <!-- Card agenda -->
+        <article class="p-5 rounded-3xl border border-slate-200 shadow-soft hover:shadow-md transition">
+          <div class="text-xs text-slate-500">12 September 2025</div>
+          <h3 class="mt-1 font-bold">Masa Pengenalan Lingkungan Sekolah (MPLS)</h3>
+          <p class="mt-2 text-sm text-slate-600">Orientasi peserta didik baru dan sosialisasi budaya sekolah.</p>
+          <a class="mt-3 inline-block text-sm font-semibold text-[color:var(--brand)]" href="#">Lihat detail →</a>
+        </article>
+        <article class="p-5 rounded-3xl border border-slate-200 shadow-soft hover:shadow-md transition">
+          <div class="text-xs text-slate-500">28 September 2025</div>
+          <h3 class="mt-1 font-bold">Lomba Kebersihan Kelas</h3>
+          <p class="mt-2 text-sm text-slate-600">Membangun budaya bersih, sehat, dan peduli lingkungan.</p>
+          <a class="mt-3 inline-block text-sm font-semibold text-[color:var(--brand)]" href="#">Lihat detail →</a>
+        </article>
+        <article class="p-5 rounded-3xl border border-slate-200 shadow-soft hover:shadow-md transition">
+          <div class="text-xs text-slate-500">05 Oktober 2025</div>
+          <h3 class="mt-1 font-bold">Pentas Seni & Bazar</h3>
+          <p class="mt-2 text-sm text-slate-600">Penampilan kelas, pameran karya, dan bazar kewirausahaan.</p>
+          <a class="mt-3 inline-block text-sm font-semibold text-[color:var(--brand)]" href="#">Lihat detail →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section id="galeri" class="py-16 md:py-24 bg-[color:var(--brand-50)]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Galeri Foto</h2>
+          <p class="mt-2 text-slate-600">Dokumentasi kegiatan dan fasilitas sekolah.</p>
+        </div>
+        <a href="#" class="hidden md:inline text-sm font-semibold text-[color:var(--brand)] hover:text-[color:var(--brand-700)]">Lihat semua →</a>
+      </div>
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img class="w-full aspect-square object-cover rounded-2xl" src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=1200&auto=format&fit=crop" alt="Galeri 1"/>
+        <img class="w-full aspect-square object-cover rounded-2xl" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Galeri 2"/>
+        <img class="w-full aspect-square object-cover rounded-2xl" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop" alt="Galeri 3"/>
+        <img class="w-full aspect-square object-cover rounded-2xl" src="https://images.unsplash.com/photo-1509062522325-cb37d5fe56e5?q=80&w=1200&auto=format&fit=crop" alt="Galeri 4"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- PPDB CTA -->
+  <section id="ppdb" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="rounded-3xl border border-slate-200 shadow-soft p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-2/3">
+          <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">Penerimaan Peserta Didik Baru (PPDB)</h3>
+          <p class="mt-3 text-slate-600">Pendaftaran tahun ajaran 2025/2026 telah dibuka. Siapkan berkas anda dan daftar secara online.</p>
+          <ul class="mt-4 text-sm text-slate-600 list-disc pl-5 space-y-1">
+            <li>Fotokopi KK & Akta Kelahiran</li>
+            <li>Pas foto terbaru 3x4</li>
+            <li>Usia minimal sesuai ketentuan</li>
+          </ul>
+        </div>
+        <div class="md:w-1/3 w-full">
+          <form class="grid gap-3">
+            <input class="w-full rounded-xl border border-slate-300 px-4 py-3" type="text" placeholder="Nama lengkap" required />
+            <input class="w-full rounded-xl border border-slate-300 px-4 py-3" type="tel" placeholder="No. HP orang tua" required />
+            <input class="w-full rounded-xl border border-slate-300 px-4 py-3" type="email" placeholder="Email (opsional)" />
+            <button type="submit" class="w-full px-5 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand-700)]">Daftar Minat</button>
+            <p class="text-xs text-slate-500">Dengan mengirim formulir ini anda menyetujui dihubungi panitia PPDB.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="py-16 md:py-24 bg-[color:var(--brand-50)]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Kontak & Lokasi</h2>
+          <p class="mt-2 text-slate-600">Hubungi kami untuk informasi lebih lanjut.</p>
+          <div class="mt-6 grid gap-3 text-sm">
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-xl bg-white border border-slate-200">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-[color:var(--brand)]"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+              </div>
+              <div>
+                <div class="font-semibold">Alamat</div>
+                <div class="text-slate-600">Kp.Cisungsang, Desa Cisungsang, Kec.Cibeber, Kab.Lebak Banten</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-xl bg-white border border-slate-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[color:var(--brand)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5h2l3 7-2 4v2h12v-2l-2-4 3-7h2"/></svg>
+              </div>
+              <div>
+                <div class="font-semibold">Telepon</div>
+                <div class="text-slate-600">0852-1404-8228</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="p-2 rounded-xl bg-white border border-slate-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[color:var(--brand)]" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v.01l10 6.25L22 6.01V6c0-1.1-.9-2-2-2zm0 4.99-8 5-8-5V18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8.99z"/></svg>
+              </div>
+              <div>
+                <div class="font-semibold">Email</div>
+                <div class="text-slate-600">sdn1cisungsang@gmail.com</div>
+              </div>
+            </div>
+          </div>
+          <form class="mt-8 grid gap-3">
+            <div class="grid md:grid-cols-2 gap-3">
+              <input class="w-full rounded-xl border border-slate-300 px-4 py-3" placeholder="Nama" required />
+              <input type="email" class="w-full rounded-xl border border-slate-300 px-4 py-3" placeholder="Email" required />
+            </div>
+            <input class="w-full rounded-xl border border-slate-300 px-4 py-3" placeholder="Subjek" />
+            <textarea rows="4" class="w-full rounded-xl border border-slate-300 px-4 py-3" placeholder="Pesan"></textarea>
+            <button class="w-fit px-5 py-3 rounded-xl bg-[color:var(--brand)] text-white font-semibold hover:bg-[color:var(--brand-700)]">Kirim Pesan</button>
+          </form>
+        </div>
+        <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-soft">
+          <iframe title="Peta Lokasi" src="https://www.google.com/maps?q=Cisungsang,+Lebak&output=embed" class="w-full h-[420px]"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-300">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
+      <div class="md:col-span-2">
+        <div class="text-white font-extrabold text-lg">SDN 1 Cisungsang</div>
+        <p class="mt-2 text-slate-400 text-sm">Membentuk generasi berkarakter, cerdas, dan peduli lingkungan.</p>
+        <div class="mt-4 flex gap-3">
+          <a class="p-2 rounded-lg bg-white/10 hover:bg-white/15" href="#" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 5 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34v6.99C18.34 21.13 22 17 22 12z"/></svg>
+          </a>
+          <a class="p-2 rounded-lg bg-white/10 hover:bg-white/15" href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2.2A2.8 2.8 0 1110.2 12 2.8 2.8 0 0112 9.2zm4.75-.95a.9.9 0 100 1.8.9.9 0 000-1.8z"/></svg>
+          </a>
+          <a class="p-2 rounded-lg bg-white/10 hover:bg-white/15" href="#" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M21.8 8.001a3 3 0 00-2.11-2.12C18.23 5.5 12 5.5 12 5.5s-6.23 0-7.69.38A3 3 0 002.2 8.001 31.9 31.9 0 002 12a31.9 31.9 0 00.2 3.999 3 3 0 002.11 2.12C5.77 18.5 12 18.5 12 18.5s6.23 0 7.69-.38a3 3 0 002.11-2.12A31.9 31.9 0 0022 12a31.9 31.9 0 00-.2-3.999zM10 9.75L15.5 12 10 14.25V9.75z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="text-white font-semibold">Tautan</div>
+        <ul class="mt-3 space-y-2 text-sm text-slate-400">
+          <li><a class="hover:text-white" href="#profil">Profil</a></li>
+          <li><a class="hover:text-white" href="#agenda">Agenda</a></li>
+          <li><a class="hover:text-white" href="#galeri">Galeri</a></li>
+          <li><a class="hover:text-white" href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-white font-semibold">Alamat</div>
+        <p class="mt-3 text-sm text-slate-400">Kp.Cisungsang, Desa Cisungsang, Kec.Cibeber, Kab.Lebak Banten</p>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-6 text-xs text-slate-400 flex flex-col md:flex-row items-center justify-between gap-3">
+        <p>© <span id="year"></span> SDN 1 Cisungsang. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    if (btn) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Animated counters
+    const counters = document.querySelectorAll('.stat');
+    const animateCount = (el) => {
+      const target = +el.getAttribute('data-target');
+      const duration = 900; // ms
+      const startTime = performance.now();
+      const step = (now) => {
+        const p = Math.min((now - startTime) / duration, 1);
+        const val = Math.floor(p * target);
+        el.textContent = val.toLocaleString('id-ID');
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { animateCount(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    counters.forEach(c => io.observe(c));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dummy form submit
+    document.querySelectorAll('form').forEach(f => {
+      f.addEventListener('submit', (ev) => {
+        ev.preventDefault();
+        alert('Terima kasih! Data berhasil dikirim. (Contoh)');
+      });
+    });
+  </script>
+</body>
+</html>
